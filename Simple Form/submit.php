@@ -16,10 +16,11 @@ if (!$conn) {
 // Get form data
 $name = $_POST['name'];
 $email = $_POST['email'];
+$MobileNumber = $_POST['MobileNumber'];
 
 
 // Insert data into database
-$sql = "INSERT INTO contacts (name, email) VALUES ('$name', '$email')";
+$sql = "INSERT INTO contacts (name, email, MobileNumber) VALUES ('$name','$email','$MobileNumber')";
 
 if (mysqli_query($conn, $sql)) {
     echo "Data submitted successfully";
